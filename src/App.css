@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#playsong {
+  animation: spin infinite 20s linear;
+}
+.rhap_container svg {
+  color: black !important;
+}
+.rhap_progress-indicator {
+  background: #282c34 !important;
+}
+.rhap_volume-indicator {
+  background: #282c34 !important;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+.form-control {
+  width: 22%;
+}
+.card {
+  border: solid 2px #3f473a;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
