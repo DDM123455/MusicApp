@@ -25,15 +25,17 @@ function Music() {
     id: 0,
     links: "https://i.scdn.co/image/ab67616d0000b273a108e07c661f9fc54de9c43a",
   };
+  const last = SongList.filter((song) => song.id === SongList.length - 1);
+
   const handleRepeat = () => {
     if (isrepeat === true) {
       setRepeat(false);
 
-      if (songindex.id === 34) {
+      if (songindex.id === SongList.length - 1) {
         // console.log(newid, "new");
         // console.log(songindex.id, "old");
 
-        setSong(loop);
+        setSong(last);
       }
     } else {
       setRepeat(true);
@@ -155,12 +157,13 @@ function Music() {
             ></i>
             <div>
               <AudioPlayer
-                autoPlay
                 src={songindex.url}
                 onPlay={(e) => setPlay(true)}
                 // other props here
                 onEnded={() =>
-                  songindex.id === 34 ? setSong(loop) : handleNext
+                  songindex.id === SongList.length - 1 && isrepeat
+                    ? setSong(loop)
+                    : handleNext
                 }
                 style={{
                   backgroundColor: "transparent",
