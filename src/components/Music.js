@@ -3,7 +3,7 @@ import { SearchContext } from "./navBar";
 import SongList from "../data";
 
 import AudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
+// import "react-h5-audio-player/lib/styles.css";
 import { useContext, useState } from "react";
 import Add from "./Add";
 
