@@ -1,13 +1,11 @@
 import SongCard from "./song";
-import classNames from "classnames/bind";
 import { SearchContext } from "./navBar";
-import styles from "./Music.module.scss";
 import SongList from "../data";
 
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { useContext, useState } from "react";
-const cx = classNames.bind(styles);
+import Add from "./Add";
 
 function Music() {
   const [songindex, setSong] = useState({});
@@ -213,7 +211,7 @@ function Music() {
                     handleClick(song);
                   }}
                 >
-                  <div className={cx("song1")}>
+                  <div className="song1">
                     <div className="card-header">
                       <h4>{song.name}</h4>
                     </div>
@@ -226,8 +224,10 @@ function Music() {
             )
           )}
         </div>
+
         <div className="col-1"></div>
       </div>
+      {/* <Add /> */}
     </div>
   );
 }
